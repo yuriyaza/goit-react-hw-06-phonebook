@@ -1,0 +1,63 @@
+.contactCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 5px 10px 15px;
+
+  background-color: #f3f3f3;
+  border: 1px solid #d3d3d3;
+  border-radius: 7px;
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+.contactCard:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.userIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
+
+.userIcon svg {
+  width: 40px;
+  height: 40px;
+}
+
+.userInfo {
+  margin-right: auto;
+}
+
+.userName {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.deleteButton {
+  padding: 15px 15px;
+  background-color: transparent;
+  border: none;
+}
+
+.deleteIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deleteIcon svg {
+  width: 20px;
+  height: 20px;
+  color: #505050;
+}
+
+.deleteButton:hover .deleteIcon svg {
+  color: #000000;
+  scale: 1.1;
+}
+
+.deleteButton:active .deleteIcon svg {
+  scale: 1;
+}

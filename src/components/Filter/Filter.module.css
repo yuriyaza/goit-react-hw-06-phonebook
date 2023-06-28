@@ -1,0 +1,17 @@
+.field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.label {
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+.input {
+  width: 100%;
+  padding: 4px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+}
