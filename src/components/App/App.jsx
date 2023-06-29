@@ -22,7 +22,7 @@ export const App = () => {
       Notify.failure(`${newContact.name} is already in contacts`);
       return;
     }
-    dispatch(contactSlice.actions.addContacts(newContact));
+    dispatch(contactSlice.actions.addContact(newContact));
   };
 
   const onDeleteContact = id => {
