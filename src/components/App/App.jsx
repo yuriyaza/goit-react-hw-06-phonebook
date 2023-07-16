@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import { contactSlice } from 'redux/contactSlice';
+import { phoneBook } from 'redux/phonebook/slice';
 import { Notify } from 'notiflix';
 
 import { ContactForm } from 'components/ContactForm/ContactForm';
@@ -11,8 +11,8 @@ import css from './App.module.css';
 Notify.init({ showOnlyTheLastOne: true, clickToClose: true });
 
 export const App = () => {
-  const contacts = useSelector(state => state.contactState.contacts);
-  const filter = useSelector(state => state.contactState.filter);
+  const contacts = useSelector(state => state.phoneBook.contacts);
+  const filter = useSelector(state => state.phoneBook.filter);
   const dispatch = useDispatch();
 
   const onAddContact = newContact => {
@@ -22,15 +22,15 @@ export const App = () => {
       Notify.failure(`${newContact.name} is already in contacts`);
       return;
     }
-    dispatch(contactSlice.actions.addContact(newContact));
+    dispatch(phoneBook.actions.addContact(newContact));
   };
 
   const onDeleteContact = id => {
-    dispatch(contactSlice.actions.deleteContact(id));
+    dispatch(phoneBook.actions.deleteContact(id));
   };
 
   const onSetFilter = filter => {
-    dispatch(contactSlice.actions.setFilter(filter));
+    dispatch(phoneBook.actions.setFilter(filter));
   };
 
   const filteredContacts = contacts.filter(contact =>

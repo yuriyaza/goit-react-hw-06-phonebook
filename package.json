@@ -1,8 +1,8 @@
 {
-  "name": "goit-redux-hw-06-redux-persist",
+  "name": "goit-redux-hw-06-persist",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://yuriyaza.github.io/goit-redux-hw-06-redux-persist/",
+  "homepage": "https://yuriyaza.github.io/goit-redux-hw-06-persist/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
     "@testing-library/jest-dom": "^5.16.3",
